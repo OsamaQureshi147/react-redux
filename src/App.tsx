@@ -1,18 +1,17 @@
+import BodyContainer from "@material-ui/core/Container";
 import React from "react";
-import styled from "styled-components";
+import { AppBar, UsersGrid } from "./components";
+import { AppContainer } from "./elements";
 
 export const App: React.FC = () => {
   return (
-    <>
-      <NavBarContainer>Hello I am navbar</NavBarContainer>
-    </>
+    <AppContainer>
+      <AppBar />
+      <BodyContainer>
+        <UsersGrid />
+      </BodyContainer>
+    </AppContainer>
   );
 };
 
 export default App;
-
-const NavBarContainer = styled.div`
-  height: 75px;
-  background-color: red;
-  width: 100%;
-`;
