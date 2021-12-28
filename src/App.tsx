@@ -1,16 +1,27 @@
 import BodyContainer from "@material-ui/core/Container";
 import React from "react";
+import { Provider } from "react-redux";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import store from "./store";
 import { AppBar, UsersGrid } from "./components";
 import { AppContainer } from "./elements";
 
 export const App: React.FC = () => {
   return (
-    <AppContainer>
-      <AppBar />
-      <BodyContainer>
-        <UsersGrid />
-      </BodyContainer>
-    </AppContainer>
+    <Provider store={store}>
+      <AppContainer>
+        <AppBar />
+        <BodyContainer>
+          <Router>
+            <Routes>
+              <Route path="/" element={<UsersGrid />} />
+            </Routes>
+          </Router>
+          {/* <UsersGrid /> */}
+        </BodyContainer>
+      </AppContainer>
+    </Provider>
   );
 };
 
