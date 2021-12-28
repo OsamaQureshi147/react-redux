@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import store from "./store";
 import { AppBar, UsersGrid } from "./components";
 import { AppContainer } from "./elements";
+import { UsersList } from "./modules";
 
 export const App: React.FC = () => {
   return (
@@ -15,7 +16,7 @@ export const App: React.FC = () => {
         <BodyContainer>
           <Router>
             <Routes>
-              <Route path="/" element={<UsersGrid />} />
+              <Route path="/" element={<UsersList />} />
             </Routes>
           </Router>
           {/* <UsersGrid /> */}
