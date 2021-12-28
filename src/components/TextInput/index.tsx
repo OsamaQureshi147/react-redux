@@ -14,7 +14,6 @@ export const TextInput = ({ label, value, type, name, onChange }: Props) => {
     <div style={{ marginTop: "10px" }}>
       <label>{label}</label>
       <Container>
-        {/* <div className={classes.container}> */}
         <Input
           data-testid="input"
           type={type}
@@ -22,7 +21,6 @@ export const TextInput = ({ label, value, type, name, onChange }: Props) => {
           name={name}
           onChange={onChange}
         />
-        {/* </div> */}
       </Container>
     </div>
   );

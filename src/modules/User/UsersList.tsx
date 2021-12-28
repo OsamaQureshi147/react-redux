@@ -18,8 +18,8 @@ const headerRows = [
   },
   {
     id: "username",
-    label: "User Name",
-    type: "number",
+    label: "Username",
+    type: "text",
   },
   {
     id: "website",

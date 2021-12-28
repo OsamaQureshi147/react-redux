@@ -18,7 +18,6 @@ export const UserForm = ({ id, setModalIsOpen }: Props) => {
 
   useEffect(() => {
     const user = users.find((u) => u.id == id);
-    console.log("user :>> ", user);
     if (user) {
       setName(user.name || "");
       setEmail(user.email || "");

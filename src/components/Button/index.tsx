@@ -3,12 +3,19 @@ import React from "react";
 import { CustomButton } from "./elements";
 
 interface Props {
-  title: string;
+  title?: string | null;
+  children?: React.ReactNode | null;
   onClick: () => void;
   disabled?: boolean;
   styles?: React.CSSProperties;
 }
-export const Button = ({ title, onClick, disabled = false, styles }: Props) => {
+export const Button = ({
+  title = null,
+  children = null,
+  onClick,
+  disabled = false,
+  styles,
+}: Props) => {
   return (
     <CustomButton
       type="button"
@@ -16,7 +23,8 @@ export const Button = ({ title, onClick, disabled = false, styles }: Props) => {
       onClick={onClick}
       style={styles}
     >
-      {title}
+      {title ? title : null}
+      {children ? children : null}
     </CustomButton>
   );
 };
