@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { editUser } from "../../store/user/UserActions";
 import { Button, TextInput } from "../../components";
+import { colors } from "../../constants";
 
 interface Props {
   id: string;
@@ -69,23 +70,27 @@ export const UserForm = ({ id, setModalIsOpen }: Props) => {
         onChange={onChange}
       />
       <TextInput
-        label={"User Name"}
+        label={"Username"}
         name={"userName"}
         type="text"
         value={username}
         onChange={onChange}
       />
       <TextInput
-        label={"Web site"}
+        label={"Website"}
         name={"website"}
         type="text"
         value={website}
         onChange={onChange}
       />
       <Button
-        title={"Edit"}
+        title={"Save"}
         onClick={handleClick}
-        styles={{ marginTop: "20px", width: "100px" }}
+        styles={{
+          marginTop: "20px",
+          width: "100px",
+          backgroundColor: colors.secondary,
+        }}
       />
     </div>
   );

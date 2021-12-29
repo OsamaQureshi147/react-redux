@@ -21,9 +21,4 @@ export default createGlobalStyle`
         font-size: 20px;
         padding: 5px;
     } 
-    // .MuiTableCell-head {
-    //     color: ${colors.secondary} !important;
-    //     font-weight: bold !important;
-    //     font-size: x-large !important;
-    // }
 `

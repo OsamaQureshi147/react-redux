@@ -5,6 +5,9 @@ export const Container = styled.div`
     margin-top: 2px;
     padding: 4px 2px;
     border-bottom: 1px solid #dfdfdf;
+    .MuiGrid-item {
+      text-align: initial;
+    }
 `
 
 export const Input = styled.input`

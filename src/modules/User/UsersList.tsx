@@ -39,7 +39,6 @@ const headerRows = [
 ];
 export const UsersList: React.FC = () => {
   const dispatch = useDispatch();
-  //   const state = useSelector((state: RootState) => state);
   const { users, loading } = useSelector(({ user }: RootState) => user);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [userId, setUserId] = useState("");

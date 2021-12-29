@@ -1,5 +1,9 @@
 import React from "react";
 import Modal from "react-modal";
+import CancelIcon from "@material-ui/icons/Cancel";
+import { Button } from "../Button";
+import styled from "styled-components";
+import { Box } from "@material-ui/core";
 
 const customStyles = {
   content: {
@@ -34,18 +38,29 @@ export const CustomModal: React.FC<Props> = ({
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <img
-        style={{
-          height: 20,
-          width: 20,
-          position: "absolute",
-          right: "20px",
-          top: "15px",
-        }}
-        onClick={() => closeModal?.()}
-        src="./close.png"
-      />
+      <IconWrapper>
+        <Button
+          styles={{ backgroundColor: "white" }}
+          onClick={() => closeModal?.()}
+        >
+          <CancelIcon />
+        </Button>
+      </IconWrapper>
       {children}
     </Modal>
   );
 };
+
+const IconWrapper = styled(Box)`
+  height: 20;
+  width: 20;
+  position: absolute;
+  right: -17px;
+  top: -15px;
+  background-color: white;
+  .MuiSvgIcon-root {
+    :hover {
+      fill: #836b6b;
+    }
+  }
+`;

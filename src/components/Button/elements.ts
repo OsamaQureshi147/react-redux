@@ -10,4 +10,7 @@ export const CustomButton = styled.button`
     border-radius: 5px;
     font-size: 11px;
     font-weight: 400;
+    :hover {
+        background-color: '#cfcfcf' !important;
+    }
 `
